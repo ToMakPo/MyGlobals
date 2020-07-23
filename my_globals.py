@@ -6,6 +6,7 @@ MAX32 = np.iinfo(np.int32).max  # the upper limit of numpy int 32
 MIN32 = np.iinfo(np.int32).min  # the lower limit of numpy int 32
 SYS_MAX = sys.maxsize
 
+
 def sum_lists(*lists):
     """
     Add together the values of multiple lists of numbers.
@@ -24,9 +25,9 @@ def sum_lists(*lists):
         c1, c2 = len(l1), len(l2)
         d = c2 - c1
         if d > 0:
-            l1 += [0]*d
+            l1 += [0] * d
         if d < 0:
-            l2 += [0]*(d * -1)
+            l2 += [0] * (d * -1)
 
         l1 = [x + y for (x, y) in zip(l1, l2)]
     return l1
